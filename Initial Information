@@ -44,7 +44,45 @@ authroirized_keys on /.ssh/authorized_keys copy the data from ansible.pub
 git commands
 prerequiremnt 
 install: git
+
 command to check if git is installed "which git"
+#clone repo
+
+git clone git@github.com:Potasio101/ansible-cisco.git
+
+#Setup our account of git in the server
+
+git config --global user.name "Potasio101"
+git config --global user.email "xxxxxxxxx@gmail.com"
+
+
+# List the changes
+git status
+#or
+git diff
+
+# upload the file
+git add filename
+git add .  # will add all the new files
+
+# upload too git
+# and switch -m is for message to the commit
+git commit -m "Update readme file, Information"
+git push origin main
+
+# get data from the git to the localmachine
+git pull
+
+example to upload
+git add .
+git commit -m "updates"
+git push
+
+
+first time use 
+clone
+and update using pull
+git pull
 
 
 
