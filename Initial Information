@@ -1,0 +1,57 @@
+# Prerequirements
+  git
+  ansible
+  cisco
+  ssh
+  sshpass
+  openssh
+  
+  
+  Cisco Template SSH setting
+      conf t
+      ip domain-name cisco.com
+      username admin priv 15 secret cisco
+      ip ssh ver 2
+      crypto key gen rsa mod 1024
+      line vty 0 4
+      transport in all
+      login local
+      end
+      
+      
+      
+SSH Config if you have issue with SHH
+
+sudo nano /etc/ssh/ssh_config
+
+KexAlgorithms=curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
+Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc
+
+
+SSH Generation key
+**information -f filename | -c comment | -t type of ssh key**
+
+ssh-keygen -f ~/.ssh/ansible -t ed25519 -c "ansible key"
+ssh-keygen -f ~/.ssh/github -t ed25519 -c "github key
+
+One of the option to send the key to the server is by using ssh copy id
+ssh-copy-id -i ~/.ssh/ansible.pub vagrant@10.1.1.125 
+
+-- or --- edit 
+
+authroirized_keys on /.ssh/authorized_keys copy the data from ansible.pub
+
+git commands
+prerequiremnt 
+install: git
+command to check if git is installed "which git"
+
+
+
+
+
+
+
+
+
+
