@@ -32,7 +32,9 @@ SSH Generation key
 **information -f filename | -c comment | -t type of ssh key**
 
 ssh-keygen -f ~/.ssh/ansible -t ed25519 -c "ansible key"
-ssh-keygen -f ~/.ssh/github -t ed25519 -c "github key
+
+**github**
+ssh-keygen -t rsa -C "your_email@example.com"
 
 One of the option to send the key to the server is by using ssh copy id
 ssh-copy-id -i ~/.ssh/ansible.pub vagrant@10.1.1.125 
