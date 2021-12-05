@@ -17,9 +17,10 @@
       # section need to be fix
       ios_config:
         lines:
-          - ntp server {{item}}
-
-      with_items:
+        #line to added item.value
+          - ntp server {{item.value}}
+          # with change to with_dict
+      with_dict:
       # section was change to user the list of ntp servers
         - "{{ntp_servers}}"
 
