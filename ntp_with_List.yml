@@ -1,0 +1,36 @@
+---
+
+- name: Deploy NTP Configuration
+  connection: network_cli
+  gather_facts: false
+  hosts: routers
+
+  vars:
+    ntp_servers:
+    # the - convert the ntp_servers in list with the ips of 10101010 and 20202020
+      - "10.10.10.10"
+      - "20.20.20.20"
+  
+  tasks:
+
+    - name: Configure NTP on all Devices
+      # section need to be fix
+      ios_config:
+        lines:
+          - ntp server {{item}}
+      with_items:
+      # section was change to user the list of ntp servers
+        - "{{ntp_servers}}"
+
+
+    - name: Verifiy NTP configuration
+      # section need to be fix
+      ios_command:
+        commands: show ntp config
+      register: result
+
+    - name: Display NTP Config to Screen
+      debug: var=result.stdout_lines
+
+      
+       
