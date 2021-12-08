@@ -73,6 +73,11 @@ ansible-vault rekey vaultley.yml
 
 
 
+# ansible.cfg
+# If set, configures the path to the Vault password file as an alternative to
+# specifying --vault-password-file on the command line.
+vault_password_file = /etc/ansible/ansible-cisco/lab-ansible/vault-pass
+
 
 Resource
 https://www.digitalocean.com/community/tutorials/how-to-use-vault-to-protect-sensitive-ansible-data-on-ubuntu-16-04
