@@ -87,8 +87,14 @@ and update using pull
 git pull
 
 
+Multiple Communication Protocols
 
 
+Value of ansible_connection 	Protocol 	          Requires 	Persistent?
+network_cli  	CLI over SSH 	                network_os setting 	yes
+netconf 	    XML over SSH 	                network_os setting 	yes
+httpapi 	    API over HTTP/HTTPS 	        network_os setting 	yes
+local         depends on provider 	            provider setting 	no
 
 
 
