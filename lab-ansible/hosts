@@ -11,7 +11,7 @@
 # Ex 1: Ungrouped hosts, specify before any group headers.
 
 [ios]
-c7200 ansible_host=10.0.137.129
+c7200 ansible_host=10.0.137.56
 
 
 #green.example.com

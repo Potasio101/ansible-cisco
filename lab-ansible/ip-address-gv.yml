@@ -1,10 +1,11 @@
 
+
 ---
 - name: ios facts
   hosts: ios
   connection: network_cli 
   gather_facts: true
-  
+
   tasks:
 
     - name: Merge provided configuration with device configuration
