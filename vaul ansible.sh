@@ -74,6 +74,14 @@ ansible-vault rekey vaultley.yml
 
 
 
+Resource
+https://www.digitalocean.com/community/tutorials/how-to-use-vault-to-protect-sensitive-ansible-data-on-ubuntu-16-04
+
+https://symfonycasts.com/screencast/ansible/variable-vault
+
+
+
+
 
 
 
